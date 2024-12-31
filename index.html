@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .navbar {
+      background-color: black;
+      padding: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+    
+    }
+
+    .logo{
+      height: 70px;
+      padding: 3px;
+    }
+
+    .logo-heading {
+      font-size: 40px;
+      text-decoration: none;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+    }
+
+   .nav-links li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+  .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #33ff33;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .search-bar{
+      padding: 5px;
+      border-radius:7px;
+      
+    }
+
+    .menu-icon{
+      height: 40px;
+      /* display: none; */
+    }
+
+
+/* mobile */
+    @media (max-width:600px) {
+      .navbar .logo{
+        font-size: 25px;
+      }
+
+      .logo{
+        height:35px ;
+      }
+
+      .search-bar{
+        display: none;
+      }
+      
+      .navbar .nav-links{
+        display: none;
+      }
+
+    }
+      
+/* tablet */
+    @media (min-width:601px) and (max-width:800px){
+      .search-bar{
+        display: none;
+      }
+
+      .navbar .nav-links {
+        margin-right: 50px;
+          }
+
+          .menu-icon{
+            display: none;
+          }
+    }
+
+/* laptop */
+    @media (min-width:801px) and (max-width:1024px){
+      .menu-icon{
+            display: none;
+          }
+    }
+
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo-container">
+          <img src="ancestors.png" class="logo">
+          <a href="#" class="logo-heading">Timeless Treasure</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#"><b>Home</b></a>
+          </li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+
+        <input type="search" placeholder="search" class="search-bar">
+        <img src="menu.png" class="menu-icon" />
+        
+      </div>
+
+     
+    </nav>
+  </body>
+</html>
